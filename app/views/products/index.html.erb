@@ -1,4 +1,4 @@
-<%= form_tag(controller: "index", action: "add") do %>
+<%= form_tag(controller: "products", action: "add") do %>
 <%= label_tag 'product','New Product:' %>
 <br>
 <%= text_field_tag 'product'%>
@@ -6,6 +6,6 @@
 <%= submit_tag 'add to cart'%>
 <% end %>
 
-<h1><%= @cart.each do |product| %></h1>
-<h3>  <%= product %></h3>
+<%= @cart.each do |product| %>
+ <%= product %>
       <% end %>
