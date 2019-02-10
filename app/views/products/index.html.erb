@@ -1,8 +1,9 @@
-<h1>Add to Cart</h1>
-<= form_for @cart do |f| %>
-  <%= f.label :product_name %>
-  <%= f.text_field :product_name %><br>
-  <%= f.submit %>
+<%= form_tag(controller: "products", action: "add") do %>
+<%= label_tag 'product','New Product:' %>
+<br>
+<%= text_field_tag 'product'%>
+<br>
+<%= submit_tag 'add to cart'%>
 <% end %>
 
 <h1><%= @cart.each do |product| %></h1>
