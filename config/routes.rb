@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 
-resources :products, only: [:index, :show]
+post '/add' => 'products#add'
 
 end
