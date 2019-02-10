@@ -1,13 +1,14 @@
-<% if @cart %>
-<% @cart.each do |product| %> <br>
-<%= product %>
-<% end %>
 
-<% end %>
+<h2>Items in cart</h2>
 
+<ul>
+<% @cart.each do |item| %>
+	<li><%=item%></li>
+<% end %>
+</ul>
 
 <%= form_tag(controller: "products", action: "add") do %>
-<%= label_tag 'product','Product:' %>
+<%= label_tag 'product','New Item:' %>
 <br>
 <%= text_field_tag 'product'%>
 <br>
