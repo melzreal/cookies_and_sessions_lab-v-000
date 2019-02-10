@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'products#index'
-  post '/index' => 'products#add'
+  post '/products', to: 'products#add'
+
 
 end
