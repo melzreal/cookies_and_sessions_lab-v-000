@@ -5,3 +5,7 @@
 
   <%= f.submit %>
 <% end %>
+
+<h1><%= @cart.each do |product| %></h1>
+<h3>  <%= product.name %></h3>
+      <% end %>
