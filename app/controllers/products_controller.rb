@@ -1,12 +1,12 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    @cart = cart
   end
 
   def add
-   @product = Product.find(params[:id])
-   cart << @product.id
+    cart << params[:product]
+    
   end
 
 
